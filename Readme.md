@@ -2,7 +2,7 @@ tap.h
 =====
 Some simple macros for writing unit tests in C that use the Test Anything Protocol.
 
-  * `plan(number_of_tests)`
+  * `plan(number_of_tests)` (optional, see examples)
   * `ok(got == expected, [test_name])`
   * `is(got, expected, fmt, [test_name])`
   * `isstr(got, expected, [test_name])`
@@ -40,7 +40,7 @@ Some simple macros for writing unit tests in C that use the Test Anything Protoc
 ```c
     #include "tap.h"
     
-    int main(int argc, char *argv[])
+    int main()
     {
         isntstr("foo", "bar");
         done_testing(1);
